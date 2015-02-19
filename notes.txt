@@ -1,0 +1,134 @@
+computer science 223 notes for feb 18th.
+
+bit: 0 or 1; base two
+
+unsigned integer some as any other base -2 number
+
+base 10:-
+                      2 - 3 - 7= 237
+multiplied by         /    |    \
+                   10^2   10^1  10^0
+
+base 2;-
+                     1 - 0 - 1 - 1= 11;
+    multiplied by   /    |   |    \
+                  2^3   2^2 2^1   2^0
+
+
+signed int:-
+       [0]-0-0-1= -1
+        |
+        v
+   determines positive or negative
+
+
+-------------------
+
+rule N
+-------
+: N bit can represent 2^n different concpets
+
+N=1
+
+ can be 1 or zero; hence, can represent one or the other= two things
+
+N=2
+
+can be 
+[1]; 00, [2]; 01, [3]; 10, or [4];11 =4 different things.
+     --       --       --         --  - 
+
+remember--
+
+signed bit represent anywhere from [0->2^N-1] things
+
+unsigned bit can represent anywhere from [0-> 2^N] things.
+
+I.E 
+
+N=2
+signed = 3 things;
+
+unsigned = 4 things.
+
+note that signed doesn't work when N=1, meaning there is only one bit.
+
+------------------------------------------------------------------
+
+Unsigned shift expression:
+
+<unsigned value>  << <integer u>
+                  --
+
+ex int b = 6;
+
+int x = b << 2;
+
+so b which = 6. wuld be 110 in bits.
+
+x would be b shifted left twice, so its bit form would look like 11000= 24
+
+
+int r = b >> 2 = 0001 = 1
+                  |       \
+               in bits= in value
+
+
+ 
+
+x >> 1  would basically be x / 2
+
+x >> 2 =   x/4
+
+x >> 3 =   x/8
+
+x >> 4 =   x/16
+
+...
+
+x >>n  =   x/2^n;
+----------------------------------------------------------------
+
+boolean bit wise operators
+
+&  == and          0011
+                  &0110
+              _________
+                   0010
+
+|  ==  or          0011
+                  |0110
+              _________
+                   0111
+
+^  ==  x-or        0011
+                  ^0110
+              _________
+                   0101
+---------------------------------------------
+
+u-bit mask=  (1 << u)-1
+
+bit field;
+     store multiple small bit values parked in one integer 32 unsigned int
+                       --------------------
+                       |      | field|    |
+                       --------------------
+                       31     15     8    0
+
+
+b  &  ((  (1 << 7)-1) 8)
+          7-bit mask
+      ------------------
+      7 bit mask starting at digit eight
+
+-------------------------------------------
+
+
+
+va-list mylist;
+va-start (mylist, n_args);
+
+int myNumber = va_arg (my list, int);
+va_end (mylist);
+}
